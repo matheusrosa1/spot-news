@@ -1,4 +1,8 @@
+from datetime import date
 from django.db import models
+from django.forms import ValidationError
+
+from news.utils.validators import validate_title
 
 
 class Category(models.Model):
@@ -18,3 +22,21 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class News(models.Model):
+    title = models.CharField(
+        max_length=200, null=False, blank=False, validators=[validate_title]
+    )
+    content = models.TextField(null=False, blank=False)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateField(null=False, blank=False)
+    image = models.ImageField(upload_to="img/", null=True, blank=True)
+    categories = models.ManyToManyField(Category)
+
+    def __str__(self):
+        return self.title
+
+    def clean(self):
+        if self.created_at and self.created_at > date.today():
+            raise ValidationError("Created at date cannot be in the future")
