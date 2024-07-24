@@ -30,13 +30,12 @@ class News(models.Model):
     )
     content = models.TextField(null=False, blank=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    created_at = models.DateField(null=False, blank=False)
+    created_at = models.DateField()
     image = models.ImageField(upload_to="img/", null=True, blank=True)
-    categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(Category, related_name="news")
 
     def __str__(self):
         return self.title
 
     def clean(self):
-        if self.created_at and self.created_at > date.today():
-            raise ValidationError("Created at date cannot be in the future")
+        super().clean()
