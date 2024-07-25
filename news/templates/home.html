@@ -5,14 +5,16 @@
 {% block content %}
     {% load static %}
     {% for news in news_list %}
-        <div class="news-card">
-            {% if news.image %}
-                <img src="{% static news.image.url %}" alt="{{ news.title }}">
-            {% endif %}
-            <h2 class="news-title">{{ news.title }}</h2>
-            <span class="news-date">{{ news.created_at|date:"d/m/Y" }}</span>
-            <p>{{ news.content|truncatewords:20 }}</p>
-        </div>
+        <a href="{% url 'news-details-page' news.id %}" class="news-card-link">
+            <div class="news-card">
+                {% if news.image %}
+                    <img src="{% static news.image.url %}" alt="{{ news.title }}">
+                {% endif %}
+                <h2 class="news-title">{{ news.title }}</h2>
+                <span class="news-date">{{ news.created_at|date:"d/m/Y" }}</span>
+                <p>{{ news.content|truncatewords:20 }}</p>
+            </div>
+        </a>
     {% empty %}
         <p>No news available.</p>
     {% endfor %}
