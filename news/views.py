@@ -10,6 +10,6 @@ def home_page(request):
     return render(request, "home.html", {"news_list": news_list})
 
 
-def news_detail(request, news_id):
-    news = get_object_or_404(News, pk=news_id)
-    return render(request, "news_detail.html", {"news": news})
+def news_detail(request, id):
+    news = get_object_or_404(News, id=id)
+    return render(request, "news_details.html", {"news": news})
