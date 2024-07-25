@@ -1,0 +1,14 @@
+<!-- news_form.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Formulário para Nova Notícia{% endblock %}
+
+{% block content %}
+    <h1>Formulário para Nova Notícia</h1>
+    <form action="{% url 'news-form' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}
