@@ -2,6 +2,7 @@ from django.urls import include, path
 
 from news.views import (
     CategoryViewSet,
+    NewsViewSet,
     UserViewSet,
     category_form,
     home_page,
@@ -14,6 +15,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r"categories", CategoryViewSet)
 router.register(f"users", UserViewSet)
+router.register(r"news", NewsViewSet)
 
 urlpatterns = [
     path("", home_page, name="home-page"),
