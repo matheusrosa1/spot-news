@@ -18,11 +18,11 @@ class NewsForm(forms.ModelForm):
         fields = "__all__"
         labels = {
             "title": "Título",
-            "author": "Autor",
             "content": "Conteúdo",
-            "category": "Categoria",
+            "author": "Autoria",
             "created_at": "Criado em",
-            "image": "URL da imagem",
+            "image": "URL da Imagem",
+            "categories": "Categoria",
         }
         widgets = {
             "created_at": forms.DateInput(attrs={"type": "date"}),
