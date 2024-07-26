@@ -30,9 +30,16 @@ def category_form(request):
 
 def news_form(request):
     if request.method == "POST":
-        form = NewsForm(request.POST)
+        form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            news_instance = form.save(commit=False)
+            categories = form.cleaned_data.get("categories")
+
+            news_instance.save()
+
+            if categories:
+                news_instance.categories.set(categories)
+
             return redirect("home-page")
     else:
         form = NewsForm()
