@@ -1,10 +1,10 @@
 from django.shortcuts import get_object_or_404, redirect, render
 
 from news.forms import CategoryForm, NewsForm
-from news.models import Category, News
+from news.models import Category, News, User
 from rest_framework import viewsets
 
-from news.serializers import CategorySerializer
+from news.serializers import CategorySerializer, UserSerializer
 
 
 # Create your views here.
@@ -13,6 +13,11 @@ from news.serializers import CategorySerializer
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 def home_page(request):
