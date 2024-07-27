@@ -84,7 +84,7 @@ Depois de instalar e iniciar o servidor, acesse o aplicativo no navegador atrav�
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/matheusrosa1/spot-news/tree/main?tab=MIT-1-ov-file) para mais detalhes.
 
 ## Contato
 
