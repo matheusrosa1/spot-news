@@ -45,7 +45,7 @@ Para instalar o SpotNews localmente, siga os passos abaixo:
 
 4. Aplique as migrações do banco de dados:
     ```bash
-    python manage.py migrate
+    python3 manage.py migrate
     ```
 
 5. Execute o script de seeds:
