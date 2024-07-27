@@ -8,7 +8,6 @@ SpotNews é um aplicativo de notícias desenvolvido com Django que permite o cad
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação](#instalação)
 - [Como Usar](#como-usar)
-- [Contribuição](#contribuição)
 - [Licença](#licença)
 - [Contato](#contato)
 
@@ -21,9 +20,7 @@ SpotNews é um projeto que visa facilitar a publicação e a gestão de notícia
 - Python
 - Django
 - HTML/CSS
-- JavaScript
-- SQLite (ou outro banco de dados suportado pelo Django)
-- Bootstrap (para estilização)
+- MySQL
 
 ## Instalação
 
@@ -51,6 +48,11 @@ Para instalar o SpotNews localmente, siga os passos abaixo:
     python manage.py migrate
     ```
 
+5. Execute o script de seeds:
+   ```bash
+    python3 manage.py runscript seeds
+    ```
+
 5. Inicie o servidor de desenvolvimento:
     ```bash
     python manage.py runserver
@@ -66,29 +68,10 @@ Depois de instalar e iniciar o servidor, acesse o aplicativo no navegador atrav�
 - **Visualização de Notícias:** Acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/) para visualizar todas as notícias cadastradas.
 - **Gestão de Categorias:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/category-form) para cadastrar novas categorias.
 
-## Contribuição
-
-Para contribuir com o projeto:
-
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature:
-    ```bash
-    git checkout -b minha-feature
-    ```
-3. Comite suas mudanças:
-    ```bash
-    git commit -m 'Adiciona minha feature'
-    ```
-4. Faça o push para a branch:
-    ```bash
-    git push origin minha-feature
-    ```
-5. Abra um Pull Request.
-
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Contato
 
-Para entrar em contato, acesse meu perfil no [GitHub](https://github.com/seu-usuario) ou envie um e-mail para seu-email@example.com.
+Para entrar em contato, acesse meu perfil no [GitHub](https://github.com/matheusrosa1) ou envie um e-mail para seu-email@example.com.
