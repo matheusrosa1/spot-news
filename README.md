@@ -43,17 +43,27 @@ Para instalar o SpotNews localmente, siga os passos abaixo:
     pip install -r requirements.txt
     ```
 
-4. Aplique as migrações do banco de dados:
+4. Construa a imagem Docker para o banco de dados:
+    ```bash
+    docker build -t spotnews-db .
+    ```
+
+5. Execute o contêiner Docker para o banco de dados:
+    ```bash
+    docker run -d -p 3306:3306 --name=spotnews-mysql-container -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=spotnews_database spotnews-db
+    ``` 
+
+6. Aplique as migrações do banco de dados:
     ```bash
     python3 manage.py migrate
     ```
 
-5. Execute o script de seeds:
+7. Execute o script de seeds:
    ```bash
     python3 manage.py runscript seeds
     ```
 
-5. Inicie o servidor de desenvolvimento:
+8. Inicie o servidor de desenvolvimento:
     ```bash
     python3 manage.py runserver
     ```
