@@ -21,6 +21,7 @@ SpotNews é um projeto que visa facilitar a publicação e a gestão de notícia
 - Django
 - HTML/CSS
 - MySQL
+- Docker
 
 ## Instalação
 
