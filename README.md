@@ -65,8 +65,8 @@ Depois de instalar e iniciar o servidor, acesse o aplicativo no navegador atrav�
 ### Funcionalidades
 
 - **Visualização de Notícias:** Acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/) para visualizar todas as notícias cadastradas.
-- **Cadastro de Notícias:** Acesse [http://127.0.0.1:8000/news-form](http://127.0.0.1:8000/news) para cadastrar uma nova notícia.
-- **Gestão de Categorias:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/categories) para cadastrar novas categorias.
+- **Cadastro de Notícias:** Acesse [http://127.0.0.1:8000/news](http://127.0.0.1:8000/news) para cadastrar uma nova notícia.
+- **Gestão de Categorias:** Acesse [http://127.0.0.1:8000/categories](http://127.0.0.1:8000/categories) para cadastrar novas categorias.
 - **API de Categorias:** Acesse [http://127.0.0.1:8000/api/categories](http://127.0.0.1:8000/api/categories) para visualizar a API de categorias.
 - **API de Usuários:** Acesse [http://127.0.0.1:8000/api/users](http://127.0.0.1:8000/api/users) para visualizar a API de usuários.
 - **API de Notícias:** Acesse [http://127.0.0.1:8000/api/news](http://127.0.0.1:8000/api/news) para visualizar a API de notícias.
