@@ -55,7 +55,7 @@ Para instalar o SpotNews localmente, siga os passos abaixo:
 
 5. Inicie o servidor de desenvolvimento:
     ```bash
-    python manage.py runserver
+    python3 manage.py runserver
     ```
 
 ## Como Usar
