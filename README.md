@@ -67,6 +67,9 @@ Depois de instalar e iniciar o servidor, acesse o aplicativo no navegador atrav�
 - **Cadastro de Notícias:** Acesse [http://127.0.0.1:8000/news-form](http://127.0.0.1:8000/news-form) para cadastrar uma nova notícia.
 - **Visualização de Notícias:** Acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/) para visualizar todas as notícias cadastradas.
 - **Gestão de Categorias:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/category-form) para cadastrar novas categorias.
+- **API de Categorias:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/api/categories) para visualizar a API de categorias.
+- **API de Usuários:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/api/users) para visualizar a API de usuários.
+- **API de Notícias:** Acesse [http://127.0.0.1:8000/category-form](http://127.0.0.1:8000/api/news) para visualizar a API de notícias.
 
 ## Licença
 
